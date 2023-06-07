@@ -16,6 +16,40 @@ body{
   font-family: 'pp_neue_montrealmedium';
 }
 
+/* Animation function */
+@keyframes fadeIn {
+  from {
+    opacity: 0;  
+    /* Starting opacity of 0 (fully transparent) */
+  }
+  to {
+    opacity: 1; 
+    /*  Ending opacity of 1 (fully opaque) */
+  }
+}
+
+/* Width and height of the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Background color of the scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Hover styles for the scrollbar thumb */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Width of the scrollbar track */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+
 /**************************************************************************************/
 
 .body{
@@ -42,7 +76,7 @@ body{
 .close{
   position: absolute;
   top: 14%;
-  left: 65%;
+  left: 64.2%;
   z-index: 100000;
   font-size: 20px;
   cursor: pointer;
@@ -159,6 +193,10 @@ body{
 .navbar-left{
   display: flex;
   z-index: 15;
+}
+.navbarleft{
+  z-index: 16;
+  color: black;
 }
 
 .disc{
@@ -601,9 +639,9 @@ scrollbar-width: none;
 
 .fam-card-div{
   position: relative;
-  padding: 1.5rem;
+  padding: 0rem;
   height: 45vh;
-  border: 1px solid #666060;
+  border: 1px solid #251b1b;
   border-radius: 6px;
   overflow: hidden;
   transition: transform .3s cubic-bezier(0, 0.52, 0.68, 1.42);
@@ -623,6 +661,22 @@ scrollbar-width: none;
   font-size: 10rem;
 }
 
+
+#fam-card-div-1 {
+  display: inline-block;
+  overflow: hidden;
+}
+
+#fam-card-div-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+
+
+
 .fam-card-font-info{
   width: 100%;
   display: flex;
@@ -634,7 +688,7 @@ scrollbar-width: none;
   transition: .3s;
 }
 
-.fam-card-ribbon{
+/* .fam-card-ribbon{
   position: absolute;
   background-color: var(--white);
   width: 50%;
@@ -648,7 +702,7 @@ scrollbar-width: none;
   transform: rotate(45deg);
   font-size: 0.8rem;
   height: 1.5rem;
-}
+} */
 
 /* on hover content for font styles */
 .fam-card-hover{
