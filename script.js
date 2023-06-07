@@ -12,7 +12,15 @@ const menu = () => {
             element.style.backgroundColor = 'black';
         });
         document.querySelectorAll('.navbar-left').forEach(element => element.style.color = 'black')
-        document.querySelector('.disc').style.backgroundColor = 'black';
+        setTimeout(() => {
+            document.querySelectorAll('.navb-a').forEach(element => {
+              element.style.opacity = '0';
+              element.style.animation = 'fadeIn 1s forwards';
+              element.style.color = 'black'; // Set the desired color
+            });
+          }, 1000); // Delay of 1000 milliseconds (1 second)
+          
+          
         document.querySelector('.disc2').style.backgroundColor = 'black';
         document.querySelector('.fix-nav').style.backgroundColor = 'white';
         document.querySelector('.mode-disc').style.backgroundColor = 'black';
@@ -37,6 +45,7 @@ const menu = () => {
             element.style.backgroundColor = 'white';
         });
         document.querySelectorAll('.navbar-left').forEach(element => element.style.color = 'white')
+        document.querySelectorAll('.navb-a').forEach(element => element.style.color = 'white')
         document.querySelector('.disc').style.backgroundColor = 'white';
         document.querySelector('.disc2').style.backgroundColor = 'white';
         document.querySelector('.fix-nav').style.backgroundColor = 'black';
@@ -54,6 +63,9 @@ const menu = () => {
 document.querySelector('.menu-bar').addEventListener('click', () => menu());
 document.querySelector('.fix-nav-menu-bar').addEventListener('click', () => menu());
 document.querySelector('.close').addEventListener('click', () => menu());
+// Opens the carousel box when active-tab is clicked
+
+// document.querySelector('.carousel-item').addEventListener('click', () => menu());
 
 /**************************************************************************************/
 
@@ -103,6 +115,27 @@ const carousel_box = (inside) => {
         })
     }
 }
+function autoClickButtons() {
+    const buttonIds = ['#carousel-btn1', '#carousel-btn2', '#carousel-btn3', '#carousel-btn4', '#carousel-btn5'];
+    let index = 0;
+  
+    const intervalId = setInterval(() => {
+      const button = document.querySelector(buttonIds[index]);
+      button.click(); // Simulate button click
+      setTimeout(() => {
+        button.classList.remove('clicked'); // Return button to its initial state
+      }, 1000); // Delay of 1 second for returning the button
+  
+      index = (index + 1) % buttonIds.length; // Update the index and loop back to 0 if it exceeds the array length
+    }, 4500); // Delay of 2 seconds for each button
+  
+  }
+  
+  // Call the function
+  autoClickButtons();
+  
+  
+
 /**************************************************************************************/
 
 // theme
