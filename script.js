@@ -231,17 +231,17 @@ const parallax = (scrolltop) => {
         document.querySelector('.circle-rotate').style.transform = `rotate(0deg)`;
     }
 
-    document.querySelector('.pizza-translate-div').style.transform = `translateY(calc(${(-3170 + scrolltop) * 0.07}px - 10%)`;
+    document.querySelector('.pizza-translate-div').style.transform = `translateY(calc(${(-5070 + scrolltop) * 0.07}px - 10%)`;
     document.querySelector('.festival-translate-div').style.transform = `translateY(calc(${(-3425 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.arc-translate-div').style.transform = `translateY(calc(${(-4380 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.huspy-translate-div').style.transform = `translateY(calc(${(-4390 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.room-translate-div').style.transform = `translateY(calc(${(-4387 + scrolltop) * 0.07}px - 10%)`;
+    document.querySelector('.arc-translate-div').style.transform = `translateY(calc(${(-3500 + scrolltop) * 0.07}px - 10%)`;
+    document.querySelector('.huspy-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
+    document.querySelector('.room-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
 
     document.querySelectorAll('.pang-translate-div').forEach(element => {
         element.style.transform = `translateY(calc(${(-4440 + scrolltop) * 0.05}px - 10%)`;
     })
 
-    document.querySelector('.footer-translate').style.transform = `translateY(calc(${(-6710 + scrolltop) * 0.1}px)`;
+    document.querySelector('.footer-translate').style.transform = `translateY(calc(${(-5510 + scrolltop) * 0.1}px)`;
 }
 
 window.addEventListener("scroll", () => {
@@ -277,101 +277,3 @@ document.querySelector('.und_5').addEventListener('mouseover', () => underline_i
 document.querySelector('.und_5').addEventListener('mouseout', () => underline_out(5))
 
 /**************************************************************************************/
-// changing font
-let font = document.querySelector('.font-change');
-let font_1_1 = document.querySelector('#font-col-1-1');
-let font_1_2 = document.querySelector('#font-col-1-2');
-let font_1_3 = document.querySelector('#font-col-1-3');
-let font_1_4 = document.querySelector('#font-col-1-4');
-let font_2_1 = document.querySelector('#font-col-2-1');
-let font_2_2 = document.querySelector('#font-col-2-2');
-let font_2_3 = document.querySelector('#font-col-2-3');
-let font_2_4 = document.querySelector('#font-col-2-4');
-let font_3_1 = document.querySelector('#font-col-3-1');
-let font_3_2 = document.querySelector('#font-col-3-2');
-let font_3_3 = document.querySelector('#font-col-3-3');
-let font_3_4 = document.querySelector('#font-col-3-4');
-let font_4_1 = document.querySelector('#font-col-4-1');
-let font_4_2 = document.querySelector('#font-col-4-2');
-let font_4_3 = document.querySelector('#font-col-4-3');
-let font_4_4 = document.querySelector('#font-col-4-4');
-
-font_1_1.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_neue_machinainktrapRg';
-})
-
-font_1_2.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_raderregular';
-})
-
-font_1_3.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_fraktion_monoregular';
-})
-
-font_1_4.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_supply_monoregular';
-})
-
-font_2_1.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_moriregular';
-})
-
-font_2_2.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_right_gothiclight';
-})
-
-font_2_3.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_neue_montrealmedium';;
-})
-
-font_2_4.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_pangram_sanscompactRg';
-})
-
-font_3_1.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_right_sanslight';
-})
-
-font_3_2.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_eikomedium';
-})
-
-font_3_3.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_neue_worldregular';
-})
-
-font_3_4.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_radio_groteskregular';
-})
-
-font_4_1.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_formulalight';;
-})
-
-font_4_2.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_editorial_newregular';
-})
-
-font_4_3.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_object_sansregular';
-})
-
-font_4_4.addEventListener('mouseover', () => {
-    font.style.color = 'black';
-    font.style.fontFamily = 'pp_cirkalight';
-})
