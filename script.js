@@ -163,17 +163,17 @@ document.querySelector('.mode').addEventListener('click', () => change_mode())
 
 /**************************************************************************************/
 
-let slide1_1 = document.querySelector('.carousel-item-1-1');
-let slide1_2 = document.querySelector('.carousel-item-1-2');
-let slide1_3 = document.querySelector('.carousel-item-1-3');
-let slide1_4 = document.querySelector('.carousel-item-1-4');
-let slide_box_1 = document.querySelector('.carousel-item-1-box');
+// let slide1_1 = document.querySelector('.carousel-item-1-1');
+// let slide1_2 = document.querySelector('.carousel-item-1-2');
+// let slide1_3 = document.querySelector('.carousel-item-1-3');
+// let slide1_4 = document.querySelector('.carousel-item-1-4');
+// let slide_box_1 = document.querySelector('.carousel-item-1-box');
 
-let slide_5_1 = document.querySelector('.carousel-item-5-1');
-let slide_5_2 = document.querySelector('.carousel-item-5-2');
-let slide_5_3 = document.querySelector('.carousel-item-5-3');
-let slide_5_4 = document.querySelector('.carousel-item-5-4');
-let slide_box_5 = document.querySelector('.carousel-item-5-box');
+// let slide_5_1 = document.querySelector('.carousel-item-5-1');
+// let slide_5_2 = document.querySelector('.carousel-item-5-2');
+// let slide_5_3 = document.querySelector('.carousel-item-5-3');
+// let slide_5_4 = document.querySelector('.carousel-item-5-4');
+// let slide_box_5 = document.querySelector('.carousel-item-5-box');
 
 let fix_nav = document.querySelector('.fix-nav');
 
@@ -193,17 +193,17 @@ const parallax = (scrolltop) => {
         fix_nav.style.transform = `translateY(0)`;
     }
     
-    slide1_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
-    slide1_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    slide1_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    slide1_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
-    slide_box_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+    // slide1_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+    // slide1_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
+    // slide1_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
+    // slide1_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
+    // slide_box_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
 
-    slide_5_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
-    slide_5_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    slide_5_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    slide_5_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
-    slide_box_5.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+    // slide_5_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+    // slide_5_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
+    // slide_5_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
+    // slide_5_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
+    // slide_box_5.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
 
     document.querySelector('.navigate-carousel').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
     document.querySelector('.scroll').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
