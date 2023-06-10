@@ -1229,31 +1229,12 @@ a:hover {
     width: 45%;
   }
 /* ------------------------------------------------Fix-Nav-------------------------------------- */
-  .fix-nav{
-    position: absolute;
-    width: 100vw;
-    height: 10vh;
-  }
-
+  
 
 
 
 
 
   /* ------------------------------Carousel--------------------- */
-  .carousel-container {
-    width: 100%;
-  }
-
-  .carousel-item {
-    width: 100%;
-  }
-
-  #carousel-item-1 > div,
-  #carousel-item-2 > div,
-  #carousel-item-3 > div,
-  #carousel-item-4 > div,
-  #carousel-item-5 > div {
-    font-size: 6rem;
-  }
+  
 }
