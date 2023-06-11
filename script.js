@@ -163,17 +163,6 @@ document.querySelector('.mode').addEventListener('click', () => change_mode())
 
 /**************************************************************************************/
 
-// let slide1_1 = document.querySelector('.carousel-item-1-1');
-// let slide1_2 = document.querySelector('.carousel-item-1-2');
-// let slide1_3 = document.querySelector('.carousel-item-1-3');
-// let slide1_4 = document.querySelector('.carousel-item-1-4');
-// let slide_box_1 = document.querySelector('.carousel-item-1-box');
-
-// let slide_5_1 = document.querySelector('.carousel-item-5-1');
-// let slide_5_2 = document.querySelector('.carousel-item-5-2');
-// let slide_5_3 = document.querySelector('.carousel-item-5-3');
-// let slide_5_4 = document.querySelector('.carousel-item-5-4');
-// let slide_box_5 = document.querySelector('.carousel-item-5-box');
 
 let fix_nav = document.querySelector('.fix-nav');
 
@@ -183,70 +172,58 @@ let bg_img = document.querySelectorAll('.bg-img');
 let scrolltop = window.pageYOffset;
 
 const parallax = (scrolltop) => {
+  scrolltop = window.pageYOffset;
 
-    scrolltop = window.pageYOffset;
+  if (scrolltop < 700 || scrolltop > 5550) {
+    fix_nav.style.transform = `translateY(-100%)`;
+  } else {
+    fix_nav.style.transform = `translateY(0)`;
+  }
 
-    if(scrolltop < 700 || scrolltop > 5550) {
-        fix_nav.style.transform = `translateY(-100%)`;
-    }
-    else{
-        fix_nav.style.transform = `translateY(0)`;
-    }
-    
-    // slide1_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
-    // slide1_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    // slide1_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    // slide1_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
-    // slide_box_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+  document.querySelector('.navigate-carousel').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
+  document.querySelector('.scroll').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
 
-    // slide_5_1.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
-    // slide_5_2.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    // slide_5_3.style.transform = `translateY(calc(${(-scrolltop * 0.3)}px))`;
-    // slide_5_4.style.transform = `translateY(calc(${-scrolltop * 0.45}px))`;
-    // slide_box_5.style.transform = `translateY(calc(${-scrolltop * 0.15}px))`;
+  bg_img.forEach(element => {
+    element.style.opacity = `${1 - scrolltop * 0.0012}`;
+  });
 
-    document.querySelector('.navigate-carousel').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
-    document.querySelector('.scroll').style.transform = `translateY(calc(${(-scrolltop * 0.15)}px))`;
+  document.querySelectorAll('.fam-card-col-2').forEach(element => {
+    element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.35}px + 30%))`;
+  });
 
-    // background opacity
-    bg_img.forEach(element => {element.style.opacity = `${1 - scrolltop*0.0012}`});
+  document.querySelectorAll('.fam-card-col-3').forEach(element => {
+    element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.2}px + 15%))`;
+  });
 
-    // font families
-    document.querySelectorAll('.fam-card-col-2').forEach(element => { 
-        element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.35}px + 30%))`;
-    })
+  document.querySelectorAll('.fam-card-col-4').forEach(element => {
+    element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.3}px + 22%))`;
+  });
 
-    document.querySelectorAll('.fam-card-col-3').forEach(element => { 
-        element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.2}px + 15%))`;
-    })
-    
-    document.querySelectorAll('.fam-card-col-4').forEach(element => { 
-        element.style.transform = `translateY(calc(${(1810 - scrolltop) * 0.3}px + 22%))`;
-    })
-    
-    if(scrolltop % 100 < 50){
+  if (scrolltop % 100 < 50) {
     document.querySelector('.circle-rotate').style.transform = `rotate(10deg)`;
-    }
-    else{
-        document.querySelector('.circle-rotate').style.transform = `rotate(0deg)`;
-    }
+  } else {
+    document.querySelector('.circle-rotate').style.transform = `rotate(0deg)`;
+  }
 
-    document.querySelector('.pizza-translate-div').style.transform = `translateY(calc(${(-5070 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.festival-translate-div').style.transform = `translateY(calc(${(-3425 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.arc-translate-div').style.transform = `translateY(calc(${(-3500 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.huspy-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
-    document.querySelector('.room-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
+  document.querySelector('.pizza-translate-div').style.transform = `translateY(calc(${(-5070 + scrolltop) * 0.07}px - 10%)`;
+  document.querySelector('.festival-translate-div').style.transform = `translateY(calc(${(-3425 + scrolltop) * 0.07}px - 10%)`;
+  document.querySelector('.arc-translate-div').style.transform = `translateY(calc(${(-3500 + scrolltop) * 0.07}px - 10%)`;
+  document.querySelector('.huspy-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
+  document.querySelector('.room-translate-div').style.transform = `translateY(calc(${(-3800 + scrolltop) * 0.07}px - 10%)`;
 
-    document.querySelectorAll('.pang-translate-div').forEach(element => {
-        element.style.transform = `translateY(calc(${(-4440 + scrolltop) * 0.05}px - 10%)`;
-    })
+  document.querySelectorAll('.pang-translate-div').forEach(element => {
+    element.style.transform = `translateY(calc(${(-4440 + scrolltop) * 0.05}px - 10%)`;
+  });
 
-    document.querySelector('.footer-translate').style.transform = `translateY(calc(${(-5510 + scrolltop) * 0.1}px)`;
-}
+  document.querySelector('.footer-translate').style.transform = `translateY(calc(${(-5510 + scrolltop) * 0.1}px)`;
+};
 
 window.addEventListener("scroll", () => {
+  if (window.innerWidth > 760) {
     parallax();
-})
+  }
+});
+
 
 /**************************************************************************************/
 
