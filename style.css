@@ -285,8 +285,8 @@ a:hover {
 
 /* carousel background images */
 .bg-imgs {
-  width: 500%;
-  height: 100%;
+  width: 500vw;
+  height: 100vh;
   position: fixed;
 }
 
@@ -304,16 +304,16 @@ a:hover {
 
 /* carousel */
 .carousel {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .carousel-container {
-  width: 500%;
-  height: 100%;
+  width: 500vw;
+  height: 100vh;
   display: flex;
   position: relative;
   top: 0;
@@ -1135,6 +1135,16 @@ a:hover {
 
 
 @media only screen and (max-width: 768px) {
+  .navbar{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
+  .head{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
 
   /* ----------------------------Drop-down-boxes------------------------------- */
   .drop-down-boxes {
@@ -1201,6 +1211,9 @@ a:hover {
   .navb-a{
     padding: 20px 0 0 0;
   }
+  .navb-a div{
+    padding: 0vh 3vh 0vh 4vh;
+  }
   #line-1, #line-2 {
     justify-content: space-between;
   }
@@ -1229,12 +1242,82 @@ a:hover {
     width: 45%;
   }
 /* ------------------------------------------------Fix-Nav-------------------------------------- */
-  
-
-
+.responsive_deletion{
+  height: 0;
+  width: 0;
+  display: none;
+}  
+.fix-nav {
+  padding: 0px 10px 0px 5vw;
+  background-color: black;
+  height: 12vh;
+  position: fixed;
+  transition: none;
+  width: 100vw;
+}
+.bg-img{
+  height: 100vh;
+  width: 100vw;
+}
 
 
 
   /* ------------------------------Carousel--------------------- */
-  
+  .carousel-item{
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  .carousel-container{
+    overflow: hidden;
+  }
+   .carousel{
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    background-size: contain;
+  } 
+  .bg-imgs {
+    position: absolute;
+    z-index: -100;
+  }
+  .navigate-carousel{
+    left: 5vw;
+  }
+  .scroll{
+    left: 80vw;
+  }
+/* --------------------------------------About Section---------------------------------- */
+  .about{
+    background-color: #000;
+    overflow: hidden;
+    height: 150vh;
+  }
+  .about-divs{
+    color: #fff;
+  }
+  .mobile-theme{
+    color: white;
+  }
+  .about-p{
+    margin: 0px 0px 0px 2vw;
+  }
+  .about-p p{
+    font-size: 25px;
+    margin: 0vh 0vw 0vh 0vw;
+    justify-content: center;
+    width: 90vw;
+  }
+  .about-divs{
+    margin: 30vw 0vh 0vw 0vh;
+  }
+  /* -----------------------------Blog-------------------------- */
+  #blog{
+    overflow: hidden;
+  }
+  .footer{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
 }
