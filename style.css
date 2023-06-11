@@ -337,7 +337,7 @@ a:hover {
   margin-bottom: 5%;
   position: absolute;
   transition: 0.3s;
-  animation: upward 1s cubic-bezier(0, 0.52, 0.68, 1.42);
+  animation: upward 1s cubic-bezier(0, 0.52, 0.68, 1.42); 
 }
 
 
