@@ -586,7 +586,7 @@ a:hover {
 
 /**************************************************************************************/
 
-/* font families */
+/* Our Shoots */
 .font-fam {
   color: var(--white);
   position: relative;
@@ -1288,29 +1288,82 @@ a:hover {
     left: 80vw;
   }
 /* --------------------------------------About Section---------------------------------- */
-  .about{
-    background-color: #000;
-    overflow: hidden;
-    height: 150vh;
-  }
-  .about-divs{
-    color: #fff;
-  }
-  .mobile-theme{
-    color: white;
-  }
-  .about-p{
-    margin: 0px 0px 0px 2vw;
-  }
-  .about-p p{
-    font-size: 25px;
-    margin: 0vh 0vw 0vh 0vw;
-    justify-content: center;
-    width: 90vw;
-  }
-  .about-divs{
-    margin: 30vw 0vh 0vw 0vh;
-  }
+.about{
+  background-color: #000;
+  font-family:'pp_neue_montrealmedium';
+  overflow: hidden;
+  height: 150vh;
+}
+.about-divs{
+  color: #fff;
+  flex-direction: column;
+}
+.mobile-theme{
+  color: white;
+}
+.about-p{
+  margin: 0px 0px 0px 2vw;
+}
+.about-p p{
+  font-size: 25px;
+  margin: 12vh 13vw 5vh 2vw;
+  justify-content: center;
+  font-weight: 2px;
+  width: 90vw;
+}
+.about-divs{
+  margin: 30vw 0vh 0vw 0vh;
+  justify-content: center;
+  display: none;
+}
+.about-divs-1{
+  display: none;
+  height: 0px;
+  width: 0px;
+}
+.about-div-3{
+  justify-content:flex-start ;
+  align-items: flex-start;
+}
+.about-link{
+  justify-content: center;
+}
+.mobile-theme-del{
+  display: none;
+}
+.about-link a{
+  top: 30vh;
+  left: 20vw;
+  width: 145%;
+}
+.underline{
+  position: relative;
+  top: 30vh;
+  left: 20vw;
+}
+/* ---------------------------------Our Work------------------------------------ */
+.fam-grid {
+  display: flex;
+  width: 94vw;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* gap: 1.3rem; */
+}
+.fam-card-div {
+  position: relative;
+  padding: 0rem;
+  height: auto;
+  width: 94vw;
+  justify-content: space-evenly;
+  border: 1px solid #251b1b;
+  border-radius: 6px;
+}
+.font-fam-head{
+  font-size: 50px;
+  padding: 0px;
+  margin: 0px;
+  justify-self: left;
+}
   /* -----------------------------Blog-------------------------- */
   #blog{
     overflow: hidden;
