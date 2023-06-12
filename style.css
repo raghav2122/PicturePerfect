@@ -337,7 +337,7 @@ a:hover {
   margin-bottom: 5%;
   position: absolute;
   transition: 0.3s;
-  animation: upward 1s cubic-bezier(0, 0.52, 0.68, 1.42); 
+  animation: upward 1s cubic-bezier(0, 0.52, 0.68, 1.42);
 }
 
 
@@ -699,8 +699,7 @@ a:hover {
   margin: auto;
   margin-top: 6rem;
 }
-
-/**************************************************************************************/
+/* ----------------------------------------------------Portfolio---------------------------------------------- */
 
 /* font in use */
 .font-use {
@@ -1342,6 +1341,14 @@ a:hover {
   left: 20vw;
 }
 /* ---------------------------------Our Work------------------------------------ */
+/* .font-fam{
+  background: #000;
+  color: wheat;
+}
+.font-fam-head{
+  background: #000;
+  color: wheat;
+} */
 .fam-grid {
   display: flex;
   width: 94vw;
@@ -1356,13 +1363,50 @@ a:hover {
   width: 94vw;
   justify-content: space-evenly;
   border: 1px solid #251b1b;
-  border-radius: 6px;
+  border-radius: 14px;
 }
-.font-fam-head{
-  font-size: 50px;
+.font-fam-head {
+  position: relative;
+  font-size: 20px;
+  display: flex;
   padding: 0px;
-  margin: 0px;
-  justify-self: left;
+  margin: 40px 0px;
+  justify-content: flex-start;
+  color: black;
+}
+.fam-circle-top{
+  color: #3a3636;
+  justify-content: center;
+  display: flex;
+  top: 57px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.fam-circle-content {
+  font-size: 20px;
+  height: 34vh;
+  justify-content: center;
+  background-color: #000;
+  display: flex;
+  color: white;
+  padding: 7vh;
+  align-items: center;
+  width: auto;
+}
+.fam-circle {
+  border: solid 1px #3a3636;
+  border-radius: 6px;
+  display: none;
+}
+/* ----------------------------------------Portfolio---------------------------------- */
+#portfolio{
+  background-color: #000;
+  height: 4000vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  overflow: visible;
 }
   /* -----------------------------Blog-------------------------- */
   #blog{
