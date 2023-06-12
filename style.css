@@ -611,6 +611,7 @@ a:hover {
   position: relative;
   padding: 0rem;
   height: 45vh;
+  max-height: fit-content;
   border: 1px solid #251b1b;
   border-radius: 6px;
   overflow: hidden;
@@ -972,10 +973,10 @@ a:hover {
 }
 
 /* footer top */
-.footer-top, .footer-bottom {
-  display: grid;
+.footer-top{
+  display: flex;
   gap: 1%;
-  grid-template-columns: 2fr 1fr 1fr;
+  /* grid-template-columns: 2fr 1fr 1fr; */
 }
 
 /* subscribe */
@@ -1000,7 +1001,10 @@ a:hover {
 .subs-form:hover, .subs-form:focus-within {
   border-color: var(--black);
 }
-
+.low-mobile-footer{
+  display: flex;
+  flex-direction: row;
+}
 .subs-form input {
   width: 88%;
   height: 2rem;
@@ -1024,7 +1028,12 @@ a:hover {
   color: #35353575;
   margin-bottom: 2rem;
 }
-
+.footer-menu{
+  padding: 0 5vw;
+}
+.support{
+  padding: 0 5vw;
+}
 .support-head a:hover {
   color: #00000021;
 }
@@ -1056,14 +1065,14 @@ a:hover {
   margin: 2rem 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 8vw;
   align-items: flex-end;
 }
 
 /* icons */
 .footer-icons {
   display: flex;
-  width: 8%;
+  width: 20vw;
   justify-content: space-between;
 }
 
@@ -1232,7 +1241,7 @@ a:hover {
 .nav-left{
   display: none;
 }
-  #Portfolio, #Contact {
+  #Portfolio-nav, #Contact-nav {
     height: 0;
     width: 0;
     display: none;
@@ -1286,6 +1295,10 @@ a:hover {
   .scroll{
     left: 80vw;
   }
+  .carousel-btn-active {
+    background-color: black;
+  }
+  
 /* --------------------------------------About Section---------------------------------- */
 .about{
   background-color: #000;
@@ -1341,14 +1354,7 @@ a:hover {
   left: 20vw;
 }
 /* ---------------------------------Our Work------------------------------------ */
-/* .font-fam{
-  background: #000;
-  color: wheat;
-}
-.font-fam-head{
-  background: #000;
-  color: wheat;
-} */
+
 .fam-grid {
   display: flex;
   width: 94vw;
@@ -1356,23 +1362,39 @@ a:hover {
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   /* gap: 1.3rem; */
 }
+.font-fam{
+  background-color: #000;
+  color: var(--white);
+  position: relative;
+  padding: 0px 3% 20vh 3%;
+  margin-bottom: 0vh;
+}
 .fam-card-div {
   position: relative;
   padding: 0rem;
-  height: auto;
+  height: fit-content;
   width: 94vw;
+  max-height: fit-content;
   justify-content: space-evenly;
-  border: 1px solid #251b1b;
+  border: none;
   border-radius: 14px;
+}
+.fam-card-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
 }
 .font-fam-head {
   position: relative;
   font-size: 20px;
   display: flex;
   padding: 0px;
-  margin: 40px 0px;
+  color: whitesmoke;
+  background-color: #000;
+  margin: 0px 0px 40px 0px;
   justify-content: flex-start;
-  color: black;
 }
 .fam-circle-top{
   color: #3a3636;
@@ -1399,22 +1421,150 @@ a:hover {
   border-radius: 6px;
   display: none;
 }
+.empty, .und_3{
+  display: none;
+}
 /* ----------------------------------------Portfolio---------------------------------- */
 #portfolio{
   background-color: #000;
-  height: 4000vh;
+  height: auto;
   width: 100vw;
   position: relative;
   display: flex;
-  overflow: visible;
+  overflow: hidden;
+}
+.translate-photos {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  width: 94vw;
+  height: fit-content;
+  justify-self: center;
+  margin-top: 6rem;
+  border-radius: 20px;
+  /* gap: 10vh 2%; */
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+/* .bg-div {
+  width: 94vw;
+  height: auto;
+  overflow: hidden;
+  border-radius: 6px;
+} */
+.translate-div {
+  width: 94vw;
+  /* height: 110%; */
+  background-size: cover;
+  background-position: center;
+}
+.pizza-festival {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+  gap: 4vh;
+}
+.font-use-heading {
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  padding: 0px;
+  margin: 0px 0px;
+  justify-content: flex-start;
+  color: whitesmoke;
+}
+.font-use-head {
+  border-top: none;
+  border-bottom: 1px solid #636363;
+}
+.bottom-right {
+  color: whitesmoke;
+}
+.font-use{
+  background-color: black;
+  margin-bottom: 0vh;
+  padding: 0 3% 30vh 3%;
+}
+.und_link span{
+  justify-content: center;
+  position: relative;
+  display: flex;
+  right: 50vw;
+  bottom: 16vh;
 }
   /* -----------------------------Blog-------------------------- */
   #blog{
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: visible;
+    padding: 30vh 1vw 30vh 1vw;
+    background-color: #000;
+    margin: 0;
+
   }
+  .pang-bottom>div{
+    width: 80vw;
+  }
+  /* --------------------------------Footer----------------------------- */
+
   .footer{
     overflow: hidden;
     margin: 0px;
     padding: 0px;
+  }
+  .subscribe {
+    width: 100vw;
+    line-height: 1;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 20vh;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe p{
+    margin: 5vh 10vw;
+    font-size: 1.75rem;
+    font-family: Neue Montreal,sans-serif;
+  }
+  .subs-form{
+    width: 80%;
+  }
+  .footer-top{
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    /* grid-template-columns: 2fr 1fr 1fr; */
+  }
+  .low-mobile-footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0vh 0 10vh 2vh;
+  }
+  .footer-head, .footer-li{
+    font-size: 1rem;
+  }
+  .footer-icons{
+    display: flex;
+    width: 45vw;
+    height: 13px;
+    padding: 5px;
+    justify-content: center;
+  }
+  .low-icon{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(50%);
+    padding: 5px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .footer-mid-1{
+    width: 90%;
   }
 }
