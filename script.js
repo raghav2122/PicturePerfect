@@ -219,7 +219,7 @@ const parallax = (scrolltop) => {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.innerWidth > 760) {
+  if (window.innerWidth > 769) {
     parallax();
   }
 });
